@@ -16,7 +16,7 @@ import com.crm.ObjectRepository.HomePage;
 import com.crm.ObjectRepository.OrganizationInfoPage;
 import com.crm.ObjectRepository.OrganizationPage;
 
-public class CreateOrgWithIndBaseClass extends BaseClass {
+public class CreateOrgWithIndBaseClassTest extends BaseClass {
 	@Test(groups="regressionSuite")
 	public void createOrgWithIndBaseClass() throws Throwable {
 	

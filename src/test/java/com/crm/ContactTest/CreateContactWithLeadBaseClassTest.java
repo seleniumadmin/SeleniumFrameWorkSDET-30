@@ -8,7 +8,7 @@ import com.crm.ObjectRepository.HomePage;
 import com.crm.ObjectRepository.OrganizationInfoPage;
 import com.crm.ObjectRepository.OrganizationPage;
 
-public class CreateContactWithLeadBaseClass extends BaseClass {
+public class CreateContactWithLeadBaseClassTest extends BaseClass {
 	@Test
 	public void createContactWithBaseClass() throws Throwable {
 	

@@ -18,7 +18,7 @@ import com.crm.ObjectRepository.OrganizationPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class CreateOrgTestBaseClass extends BaseClass {
+public class CreateOrgTestBaseClassTest extends BaseClass {
 	@Test(groups="smokeSuite")
 	public void createOrgTestBaseClass() throws Throwable {
 		

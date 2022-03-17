@@ -11,7 +11,7 @@ import com.crm.ObjectRepository.HomePage;
 import com.crm.ObjectRepository.ProductInfoPage;
 import com.crm.ObjectRepository.ProductPage;
 
-public class CreateCampaignWithProductBaseClass extends BaseClass {
+public class CreateCampaignWithProductBaseClassTest extends BaseClass {
 @Test
 public void createCampaignWithProductBaseClass() throws Throwable {
 	/*Step 2:read data from excel sheet*/
