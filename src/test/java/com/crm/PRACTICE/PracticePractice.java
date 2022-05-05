@@ -31,6 +31,7 @@ public class PracticePractice {
 				else 
 				{
 					System.out.println("invalid browser");
+					
 				}
 				driver.manage().window().maximize();
 				driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);

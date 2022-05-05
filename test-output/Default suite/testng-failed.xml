@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.ContactTest.CreateContactBaseClassTest">
+      <class name="com.crm.OrganizationsTest.CreateOrgtTest">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="launchTheBrowser"/>
-          <include name="closeDb"/>
-          <include name="connectDataBase"/>
-          <include name="login"/>
-          <include name="logout"/>
-          <include name="createContactBaseClass"/>
+          <include name="createOrgTest"/>
         </methods>
-      </class> <!-- com.crm.ContactTest.CreateContactBaseClassTest -->
+      </class> <!-- com.crm.OrganizationsTest.CreateOrgtTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

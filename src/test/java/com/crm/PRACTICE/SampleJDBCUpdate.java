@@ -2,6 +2,7 @@ package com.crm.PRACTICE;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 //import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -9,12 +10,16 @@ import org.testng.annotations.Test;
 
 import com.mysql.cj.jdbc.Driver;
 
-public class SampleJDBCUpdate {
+public class SampleJDBCUpdate 
+{
 	@Test
-	public void sampleJDBCQueryUpdate() throws Throwable {
+	public void sampleJDBCQueryUpdate() throws Throwable 
+	{
 		
 		Connection con=null;
-		try {
+		try 
+		
+		{
 		
 		//spet 1:register the database 
 		Driver driverRef=new Driver();
@@ -33,14 +38,18 @@ public class SampleJDBCUpdate {
 		{
 			System.out.println("data added successfully");
 		}
-		else {
+		else 
+		{
 			System.out.println("data not added");
 		}
 	}
-	catch(Exception e) {
+	catch(Exception e) 
+		{
 		
 	}
-	finally {
+		
+	finally 
+	{
 		//step5
 		con.close();
 		System.out.println("connection closed");

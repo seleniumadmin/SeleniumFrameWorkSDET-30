@@ -11,9 +11,12 @@ import org.testng.annotations.Test;
 
 import com.mysql.cj.jdbc.Driver;
 
-public class SampleJDBCExecuteQuery {
+
+public class SampleJDBCExecuteQuery 
+{
 	@Test
-	public void sampleJDBCExecuteQuery() throws Throwable {
+	public void sampleJDBCExecuteQuery() throws Throwable 
+	{
 		//step 1:register the database
 		Driver driverRef=new Driver();
 		DriverManager.registerDriver(driverRef);
@@ -27,7 +30,8 @@ public class SampleJDBCExecuteQuery {
 		
 		//step 4: execute query-- provides table name
 		ResultSet result=state.executeQuery("select * from student;");
-		while(result.next()) {
+		while(result.next()) 
+		{
 			System.out.println(result.getString(1)+" "+result.getString(2)+" "+result.getString(3));
 		}
 		

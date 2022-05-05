@@ -67,14 +67,18 @@ public class ExcelFileUtility {
 		Workbook wb=WorkbookFactory.create(fis);
 		Sheet sh=wb.getSheet(sheet);
 		int row=sh.getLastRowNum();
+		
 		return row;
 	}
+	
+	
+	
 	public Object[][] readmultipleDataFromExcel(String SheetName) throws Throwable {
 		FileInputStream fis=new FileInputStream(IPathConstants.ExcelPath);
 		Workbook wb=WorkbookFactory.create(fis);
 		Sheet sh=wb.getSheet(SheetName);
 		int lastRow=sh.getLastRowNum();
-		int lastCell=sh.getRow(0).getLastCellNum();1
+		int lastCell=sh.getRow(0).getLastCellNum();
 		
 		Object[][] data=new Object[lastRow][lastCell];
 		

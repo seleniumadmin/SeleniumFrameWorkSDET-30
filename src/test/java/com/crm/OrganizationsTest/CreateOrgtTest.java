@@ -20,6 +20,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 
 public class CreateOrgtTest {
@@ -46,12 +48,15 @@ public void createOrgTest() throws Throwable {
 		Cell cel=ro.getCell(2);
 		String OrgName=cel.getStringCellValue();
 		
+		
 		/*step2 :launch the browser*/
 		WebDriver driver=null;
 		if(BROWSER.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 		}
 		else if(BROWSER.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
 		}
 		else {
@@ -77,6 +82,17 @@ public void createOrgTest() throws Throwable {
 		/*step 6:enter mandatoery feilds and save*/
 		driver.findElement(By.name("accountname")).sendKeys(OrgName+" "+random);
 		driver.findElement(By.xpath("//input[@title='Save [Alt+S]']")).click();
+		/*data verification
+		 */
+		String actData=driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
+		if(actData.contains(OrgName))
+		{
+			System.out.println("data is added successfully");
+		}
+		else
+		{
+			System.out.println("data is invalid");
+		}
 		
 		/*step7 :logout of Application*/
 		WebElement ele=driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));	
@@ -92,5 +108,6 @@ public void createOrgTest() throws Throwable {
 	
 	
 }
+
 
 }

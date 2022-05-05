@@ -3,12 +3,15 @@ package com.crm.GenericLibrary;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
-public class RetryAnalyserImplementation implements IRetryAnalyzer {
+public class RetryAnalyserImplementation implements IRetryAnalyzer 
+{
 	int count=0;
 	int retryCount=3;
 
-	public boolean retry(ITestResult result) {
-		while(count<retryCount) {
+	public boolean retry(ITestResult result) 
+	{
+		while(count<retryCount) 
+		{
 			count++;
 			return true;
 		}

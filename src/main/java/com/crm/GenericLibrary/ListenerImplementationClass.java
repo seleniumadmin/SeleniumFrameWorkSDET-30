@@ -14,28 +14,27 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 //import com.google.common.io.Files;
-
 public class ListenerImplementationClass implements ITestListener 
 {
-
-	ExtentReports report;
+    ExtentReports report;
 	ExtentTest test;
-	public void onTestStart(ITestResult result) {
+	public void onTestStart(ITestResult result) 
+	{
 		
 		String MethodName=result.getMethod().getMethodName();
 		test=report.createTest(MethodName);
 		//Reporter.log(MethodName+"--- testscript execution started");
-		
-		
 	}
 
-	public void onTestSuccess(ITestResult result) {
+	public void onTestSuccess(ITestResult result) 
+	{
 	String MethodName=result.getMethod().getMethodName();
 	test.log(Status.PASS, MethodName+"------>Passed");
 	//Reporter.log(MethodName+"---testscript execution succesfull-PASS");
 	}
 
-	public void onTestFailure(ITestResult result) {
+	public void onTestFailure(ITestResult result) 
+	{
 		
 		String path=null;
 		String MethodName=result.getMethod().getMethodName()+"-";
@@ -46,7 +45,8 @@ public class ListenerImplementationClass implements ITestListener
 		System.out.println(screenshotName);
 		
 		//step2:using screenshot method from webdriver utility
-       try {
+       try 
+       {
 			
 			path = new WebDriverUtility().getScreenShot(BaseClass.sDriver, screenshotName);
 			
@@ -58,10 +58,12 @@ public class ListenerImplementationClass implements ITestListener
 			//File dst = new File(path);
 			//Files.copy(src,dst);
 			
-		} catch (Throwable e) {
+		} 
+       catch (Throwable e) 
+       {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+	   }
        test.log(Status.FAIL, MethodName+"------>Failed");
 	   //it will capture the excecption and log it in the report
        test.log(Status.FAIL, result.getThrowable());
@@ -70,22 +72,26 @@ public class ListenerImplementationClass implements ITestListener
 		
 	}
 
-	public void onTestSkipped(ITestResult result) {
+	public void onTestSkipped(ITestResult result) 
+	{
 		String MethodName = result.getMethod().getMethodName();
 		test.log(Status.SKIP, result.getThrowable());
 		//Reporter.log(MethodName + "--- TestScript Skipped");
 		
 	}
 
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) 
+	{
 
 	}
 
-	public void onTestFailedWithTimeout(ITestResult result) {
+	public void onTestFailedWithTimeout(ITestResult result) 
+	{
 	
 	}
 
-	public void onStart(ITestContext context) {
+	public void onStart(ITestContext context) 
+	{
 		//Execution will start here
 		/*configure the reports */
 		ExtentSparkReporter htmlReport=new ExtentSparkReporter("./ExtentReporters/Report"+new JavaUtility().getSystemDateInFormat()+".html");
@@ -102,7 +108,8 @@ public class ListenerImplementationClass implements ITestListener
        
 	}
 
-	public void onFinish(ITestContext context) {
+	public void onFinish(ITestContext context) 
+	{
 		//consolidate all the parametrs and generate the report
 		report.flush();
 	

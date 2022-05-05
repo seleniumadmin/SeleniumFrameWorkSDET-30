@@ -21,9 +21,11 @@ import com.crm.ObjectRepository.LoginPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 @Listeners(com.crm.GenericLibrary.ListenerImplementationClass.class)
-public class CreateContactBaseClassTest extends BaseClass {
+public class CreateContactBaseClassTest extends BaseClass 
+{
 	@Test
-	public void createContactBaseClass() throws Throwable {
+	public void createContactBaseClass() throws Throwable 
+	{
 	/*read data from excel sheet*/
 	String LastName=eLib.readDataFromExcelSheet("Contact", 1, 2)+"_"+jLib.getRandamNumber();
 	
@@ -46,7 +48,8 @@ public class CreateContactBaseClassTest extends BaseClass {
 	//step7:verification
 	ContactInfoPage cip=new ContactInfoPage(driver);
 	String actContactName=cip.ContactInfo();
-	if(actContactName.contains(LastName)) {
+	if(actContactName.contains(LastName))
+	{
 		System.out.println(actContactName+"------>data is verified");
 		
 	}

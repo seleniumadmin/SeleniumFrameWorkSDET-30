@@ -188,7 +188,7 @@ public class WebDriverUtility {
      * @param index
      * @param nameOrId
      */
-    public void switchToFrame(WebDriver driver,int index,String nameOrId) {
+    public void switchToFrame(WebDriver driver,String nameOrId) {
     	driver.switchTo().frame(nameOrId);
     }
     /**
@@ -236,7 +236,8 @@ public class WebDriverUtility {
     		String currentWinTitle=driver.switchTo().window(winId).getTitle();
     		
     		//step6:check whether the current window is expected
-    		if(currentWinTitle.contains(partialWinTitle)) {
+    		if(currentWinTitle.contains(partialWinTitle)) 
+    		{
     			break;
     		}
 

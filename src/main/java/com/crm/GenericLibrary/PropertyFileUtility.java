@@ -9,6 +9,8 @@ import java.util.Properties;
  
  */
 
+
+
 public class PropertyFileUtility {
 	/**
 	 * this method will read data from property file and return value to user

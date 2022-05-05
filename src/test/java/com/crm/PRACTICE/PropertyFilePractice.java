@@ -17,7 +17,7 @@ public class PropertyFilePractice {
 		pObj.load(fis);
 		
 		//step3:read the data
-		String URL=pObj.getProperty("username");
+		String URL=pObj.getProperty("url");
 		
 		
 		//verification

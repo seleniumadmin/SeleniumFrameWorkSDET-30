@@ -1,5 +1,4 @@
 package com.crm.OrganizationsTest;
-
 import org.openqa.selenium.By;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -11,17 +10,13 @@ import com.crm.ObjectRepository.HomePage;
 import com.crm.ObjectRepository.OrganizationInfoPage;
 import com.crm.ObjectRepository.OrganizationPage;
 
-public class CreateOrgForAssertionTest extends BaseClass 
-{
-
-	@Test
-	public void createOrgTestBaseClass() throws Throwable 
-	{
-		
+public class CreateOrgForAssertionTest1Practice extends BaseClass {
+	@Test(groups="regressionSuite")
+	public void createOrgWithIndBaseClass() throws Throwable {
 		String OrgName=eLib.readDataFromExcelSheet("Org", 1, 2)+"_"+jLib.getRandamNumber();
 		SoftAssert sa=new SoftAssert();
 	
-		/*step4:navigate tonOrganization Link*/
+		//step4
 		HomePage hp=new HomePage(driver); 
 		hp.ClickOnOrgLnk();
 		String ExpData="Organizations";
@@ -44,7 +39,7 @@ public class CreateOrgForAssertionTest extends BaseClass
 		OrganizationInfoPage oip=new OrganizationInfoPage(driver);
 		String actOrgName=oip.OrgNameInfo();
 		Reporter.log(actOrgName+"org created",true);
-		sa.assertTrue(actOrgName.contains("abcd"));
+		sa.assertTrue(actOrgName.contains(OrgName));
 		
 		/*if(actOrgName.contains(OrgName)) {
 			System.out.println(actOrgName+"---->data verified");
@@ -59,3 +54,5 @@ public class CreateOrgForAssertionTest extends BaseClass
 
 	}
 }
+		
+	
