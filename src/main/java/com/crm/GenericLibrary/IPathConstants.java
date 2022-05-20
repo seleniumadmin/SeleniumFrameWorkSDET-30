@@ -6,7 +6,8 @@ package com.crm.GenericLibrary;
  * @author usha
  *
  */
-public interface IPathConstants {
+public interface IPathConstants 
+{
 	
 	String ExcelPath=".\\src\\test\\resources\\TestData.xlsx";
 	String FilePath=".\\src\\test\\resources\\CommonData.properties";

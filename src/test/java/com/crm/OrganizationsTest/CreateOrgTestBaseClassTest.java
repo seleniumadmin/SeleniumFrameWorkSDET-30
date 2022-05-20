@@ -1,3 +1,4 @@
+
 package com.crm.OrganizationsTest;
 
 import org.openqa.selenium.WebDriver;
@@ -20,7 +21,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateOrgTestBaseClassTest extends BaseClass {
 	@Test(groups="smokeSuite")
-	public void createOrgTestBaseClass() throws Throwable {
+	public void createOrgTestBaseClass() throws Throwable 
+	{
 		
 		String OrgName=eLib.readDataFromExcelSheet("Org", 1, 2)+"_"+jLib.getRandamNumber();
 	
@@ -40,7 +42,8 @@ public class CreateOrgTestBaseClassTest extends BaseClass {
 		/*step7:verification*/
 		OrganizationInfoPage oip=new OrganizationInfoPage(driver);
 		String actOrgName=oip.OrgNameInfo();
-		if(actOrgName.contains(OrgName)) {
+		if(actOrgName.contains(OrgName)) 
+		{
 			System.out.println(actOrgName+"---->data verified");
 		}
 		else {

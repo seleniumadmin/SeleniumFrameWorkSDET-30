@@ -15,9 +15,11 @@ import com.crm.GenericLibrary.WebDriverUtility;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class CreateCampaignWithProdGeneric {
+public class CreateCampaignWithProdGeneric 
+{
 	@Test
-	public void createCampaignWithProdGeneric() throws Throwable {
+	public void createCampaignWithProdGeneric() throws Throwable 
+	{
 		/*read data*/
 		PropertyFileUtility pLib=new PropertyFileUtility();
 		JavaUtility jLib=new JavaUtility();

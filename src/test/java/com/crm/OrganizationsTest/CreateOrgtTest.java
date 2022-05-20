@@ -24,13 +24,16 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
-public class CreateOrgtTest {
+public class CreateOrgtTest 
+{
 @Test
-public void createOrgTest() throws Throwable {
-	/*generate random number*/
-	 Random	ran=new Random();
-	 int random=ran.nextInt(500);
-		/* step 1:read all necessary data*/
+public void createOrgTest() throws Throwable 
+{
+	    /*generate random number*/
+	    Random	ran=new Random();
+	    int random=ran.nextInt(500);
+		
+	    /* step 1:read all necessary data*/
 		//read data from property file
 		FileInputStream fis=new FileInputStream(".\\src\\test\\resources\\CommonData.properties");
 		Properties pObj=new Properties();

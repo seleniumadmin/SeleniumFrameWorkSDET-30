@@ -7,8 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.crm.GenericLibrary.WebDriverUtility;
 
-public class CreateOrganizationPage extends WebDriverUtility {
-//step1 Declaration
+public class CreateOrganizationPage extends WebDriverUtility 
+{
+    //step1 Declaration
 	@FindBy(name="accountname")
 	private WebElement OrgNameEdt;
 	
@@ -22,38 +23,48 @@ public class CreateOrganizationPage extends WebDriverUtility {
 	private WebElement saveBtn;
 	 
 	//step2 initialization
-	public CreateOrganizationPage(WebDriver driver) {
+	public CreateOrganizationPage(WebDriver driver) 
+	{
 		PageFactory.initElements(driver, this);
 	}
 	//step 3:utilization
 
-	public WebElement getOrgNameEdt() {
+	public WebElement getOrgNameEdt() 
+	{
 		return OrgNameEdt;
 	}
 
-	public WebElement getIndustryDropDown() {
+	public WebElement getIndustryDropDown() 
+	{
 		return industryDropDown;
 	}
 
-	public WebElement getTypeDropDown() {
+	public WebElement getTypeDropDown() 
+	{
 		return typeDropDown;
 	}
 
-	public WebElement getSaveBtn() {
+	public WebElement getSaveBtn() 
+	{
 		return saveBtn;
 	}
 	//business library
-	public void createNewOrg(String orgName) {
+	public void createNewOrg(String orgName) 
+	{
 		OrgNameEdt.sendKeys(orgName);
 		saveBtn.click();
 		
 	}
-	public void createOrgwithInd(String orgName,String indType) {
-		OrgNameEdt.sendKeys(orgName,indType);
+	public void createOrgwithInd(String orgName,String indType) 
+	{
+		OrgNameEdt.sendKeys(orgName);
+		//OrgNameEdt.sendKeys(orgName);
+		
 		select(industryDropDown,indType);
 	    saveBtn.click();
 	}
-	public void createOrgWithIndType(String orgName, String indType, String type) {
+	public void createOrgWithIndType(String orgName, String indType, String type) 
+	{
 	
 	OrgNameEdt.sendKeys(orgName);
 	select(industryDropDown,indType);

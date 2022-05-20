@@ -13,12 +13,14 @@ import org.testng.annotations.Test;
 
 public class PracticePractice {
 	@Test
-	public void practicepractice() throws Throwable {
-		//step1:read data from file
+	public void practicepractice() throws Throwable 
+	{
+		        //step1:read data from file
 				FileInputStream fis=new FileInputStream(".\\src\\test\\resources\\CommonData.properties");
 				Properties pobj = new Properties();
 				pobj.load(fis);
 				String BROWSER = pobj.getProperty("browser");
+				
 				WebDriver driver=null;
 				if(BROWSER.equalsIgnoreCase("chrome")) 
 				{

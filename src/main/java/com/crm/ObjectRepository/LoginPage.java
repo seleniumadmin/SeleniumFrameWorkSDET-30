@@ -5,8 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
-	//step1: declaration -use annotation
+public class LoginPage 
+{
+   //step1: declaration use annotation
 	@FindBy(name="user_name")
 	private WebElement userNameEdt;
 	
@@ -16,23 +17,25 @@ public class LoginPage {
 	@FindBy(id="submitButton")
 	private WebElement submitBtn;
 	
-	//step2:Iniliazation -use constructor
-	public LoginPage(WebDriver driver) {
+	//step2: Initialization use constructor
+	public LoginPage(WebDriver driver) 
+	{
 		PageFactory.initElements(driver, this);
 	}
 	
-	//step3:Utilization -provide getters
-
-
-	public WebElement getUserNameEdt() {
+	//step3:Utilization provide getters
+    public WebElement getUserNameEdt()
+	{
 		return userNameEdt;
 	}
 
-	public WebElement getPasswordEdt() {
+	public WebElement getPasswordEdt() 
+	{
 		return passwordEdt;
 	}
 
-	public WebElement getSubmitBtn() {
+	public WebElement getSubmitBtn() 
+	{
 		return submitBtn;
 	}
 	
@@ -42,8 +45,6 @@ public class LoginPage {
 		userNameEdt.sendKeys(userName);
 		passwordEdt.sendKeys(password);
 		submitBtn.click();
-	}
+		}
 		
-	
-	
 }

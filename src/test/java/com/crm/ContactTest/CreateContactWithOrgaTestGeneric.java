@@ -77,7 +77,7 @@ public class CreateContactWithOrgaTestGeneric {
 		}
 		
 		//navigate contact
-driver.findElement(By.xpath("//a[.='Contacts']")).click();
+        driver.findElement(By.xpath("//a[.='Contacts']")).click();
 		
 		//step5 create contact
 		driver.findElement(By.xpath("//img[@src='themes/softed/images/btnL3Add.gif']")).click();

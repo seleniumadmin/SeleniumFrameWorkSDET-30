@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.OrganizationsTest.CreateOrgtTest">
+      <class name="com.crm.PRACTICE.PrintMobileNames">
         <methods>
-          <include name="createOrgTest"/>
+          <include name="printMobileNames"/>
         </methods>
-      </class> <!-- com.crm.OrganizationsTest.CreateOrgtTest -->
+      </class> <!-- com.crm.PRACTICE.PrintMobileNames -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

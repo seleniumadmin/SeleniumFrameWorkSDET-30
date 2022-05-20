@@ -5,21 +5,27 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class OrganizationInfoPage {
+public class OrganizationInfoPage 
+{
 	//step1 decalration
 	@FindBy(xpath="//span[@class='dvHeaderText']")
 	private WebElement headerText;
 	
 	//step2 initialization
-	public OrganizationInfoPage(WebDriver driver) {
+	public OrganizationInfoPage(WebDriver driver) 
+	{
 		PageFactory.initElements(driver, this);
 	}
 	//step 3:utilization
-	public WebElement getHeaderText() {
+	public WebElement getHeaderText() 
+	{
 		return headerText;
 	}
 	//business library
-	public String OrgNameInfo() {
+	public String OrgNameInfo() 
+	
+	
+	{
 		String OrgInfo=headerText.getText();
 		return OrgInfo;
 		

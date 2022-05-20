@@ -7,7 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.crm.GenericLibrary.WebDriverUtility;
 
-public class HomePage extends WebDriverUtility {
+public class HomePage extends WebDriverUtility 
+{
 //step1:Declaration
 	@FindBy(linkText="Organizations")
 	private WebElement organizationLnk;
@@ -34,58 +35,72 @@ public class HomePage extends WebDriverUtility {
 	private WebElement signOutLnk;
 	
 	//step2:initialization
-	public HomePage(WebDriver driver) {
+	public HomePage(WebDriver driver) 
+	{
 		PageFactory.initElements(driver, this);
 	}
    
 	//step3:generate getters
-	public WebElement getOrganizationLnk() {
+	public WebElement getOrganizationLnk() 
+	{
 		return organizationLnk;
 	}
 
-	public WebElement getContactLnk() {
+	public WebElement getContactLnk() 
+	{
 		return contactLnk;
 	}
 
-	public WebElement getOpportunityLnk() {
+	public WebElement getOpportunityLnk() 
+	{
 		return opportunityLnk;
 	}
 
-	public WebElement getProductLnk() {
+	public WebElement getProductLnk() 
+	{
 		return productLnk;
 	}
 
-	public WebElement getMoreLnk() {
+	public WebElement getMoreLnk() 
+	{
 		return moreLnk;
 	}
 
-	public WebElement getCampaignLnk() {
+	public WebElement getCampaignLnk() 
+	{
 		return campaignLnk;
 	}
 
-	public WebElement getAdministratorImg() {
+	public WebElement getAdministratorImg() 
+	{
 		return administratorImg;
 	}
 
-	public WebElement getSignOutLnk() {
+	public WebElement getSignOutLnk() 
+	{
 		return signOutLnk;
 	}
 	
 	//step4:business library
-	public void ClickOnOrgLnk() {
+	public void ClickOnOrgLnk() 
+	{
 		organizationLnk.click();
 	}
-	public void ClickOnContactLnk() {
+	public void ClickOnContactLnk() 
+	{
 		contactLnk.click();
 	}
-	public void CilckOnProductLnk() {
+	public void CilckOnProductLnk() 
+	{
 		productLnk.click();
 	}
 	
-	public void ClickOnCampaignLnk() {
+	public void ClickOnCampaignLnk() 
+	{
 		campaignLnk.click();
 	}
-	public void ClickOnMoreLnk() {
+	public void ClickOnMoreLnk() 
+	{
 		moreLnk.click();
 	}
 	

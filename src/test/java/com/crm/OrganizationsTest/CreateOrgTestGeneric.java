@@ -47,13 +47,16 @@ public class CreateOrgTestGeneric {
 		
 		/*step2 :launch the browser*/
 		WebDriver driver=null;
-		if(BROWSER.equalsIgnoreCase("chrome")) {
+		if(BROWSER.equalsIgnoreCase("chrome")) 
+		{
 			driver=new ChromeDriver();
 		}
-		else if(BROWSER.equalsIgnoreCase("firefox")) {
+		else if(BROWSER.equalsIgnoreCase("firefox")) 
+		{
 			driver=new FirefoxDriver();
 		}
-		else {
+		else 
+		{
 			System.out.println("invalid value");
 		}
 		
