@@ -241,8 +241,7 @@ public class WebDriverUtility {
     			break;
     		}
 
-    		
-    	}
+    		}
     	/**
     	 * this method will take screenShot and store it in folder called as Screenshot
     	 */

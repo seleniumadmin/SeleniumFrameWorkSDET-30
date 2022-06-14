@@ -37,7 +37,8 @@ public class CreateContactPage extends WebDriverUtility
 	private WebElement portalUserCheckBox;
 	
 	//initialization
-	public CreateContactPage(WebDriver driver) {
+	public CreateContactPage(WebDriver driver) 
+	{
 		PageFactory.initElements(driver, this);
 	}
 //utilization
@@ -75,7 +76,8 @@ public class CreateContactPage extends WebDriverUtility
 	}
 	
 	//business library
-	public void portalUserBox(String lastName, String emailId) {
+	public void portalUserBox(String lastName, String emailId) 
+	{
 		lastNameEdt.sendKeys(lastName);
 		emaildEdt.sendKeys(emailId);
 		portalUserCheckBox.click();
@@ -83,7 +85,8 @@ public class CreateContactPage extends WebDriverUtility
 	}
 	
 	
-	public void createNewContact(String lastName) {
+	public void createNewContact(String lastName) 
+	{
 		lastNameEdt.sendKeys(lastName);
 		saveBtn.click();
 	}

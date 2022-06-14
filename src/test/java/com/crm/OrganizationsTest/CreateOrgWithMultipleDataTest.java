@@ -85,7 +85,8 @@ public class CreateOrgWithMultipleDataTest {
 	    driver.quit();
 	}
 	@DataProvider(name="OrgTestData")
-	public Object[][] getData() throws Throwable {
+	public Object[][] getData() throws Throwable
+	{
 		Object[][] data=eLib.readmultipleDataFromExcel("OrgMultipledata");
 		return data;
 	}

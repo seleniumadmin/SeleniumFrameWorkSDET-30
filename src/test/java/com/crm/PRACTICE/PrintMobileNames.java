@@ -27,6 +27,7 @@ public class PrintMobileNames {
 		java.util.List<WebElement> ele = driver.findElements(By.xpath("//div[contains(text(),'REDMI ')]"));
 		System.out.println(ele.size());
 		for(WebElement allOption:ele) 
+			
 		{
 			System.out.println(allOption.getText());
 		}

@@ -46,7 +46,8 @@ public class CreateOrgTestBaseClassTest extends BaseClass {
 		{
 			System.out.println(actOrgName+"---->data verified");
 		}
-		else {
+		else 
+		{
 			System.out.println("data invalid");
 		}
 		

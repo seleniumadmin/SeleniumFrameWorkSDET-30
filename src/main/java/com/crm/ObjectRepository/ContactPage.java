@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class ContactPage 
 {
 //declaration
-@FindBy(xpath="//img[@title='Create Contact...']")
+@FindBy(xpath="//img[@alt='Create Contact...']")
 private WebElement createContactLookUpImg;
 
 @FindBy(xpath="//table[@class='lvt small']/tbody/tr[*]/td[1]/input[@name='selected_id']")

@@ -9,28 +9,35 @@ import org.testng.asserts.SoftAssert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class AssertLoginPage {
+public class VerifyGoogleTitleBySoftAssertion 
+{
 	@Test
-	public void assertLoginPage() {
+	public void verifyGoogle() 
+	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get("http://localhost:8888/");
-		String url=driver.getCurrentUrl();
-		System.out.println(url);
-		String expected="http://localhost:8888/";
-		//String expected="http://localhost:8888/";
+		driver.get("https://www.google.com/");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		String actualData=driver.getTitle();
+		String expectedData="Google";
+		
 		SoftAssert sa=new SoftAssert();
-		sa.assertEquals(url, expected);
+		sa.assertEquals(actualData, expectedData);
 		sa.assertAll();
 		
-		if(expected.contains(url)) {
-			System.out.println("verified");
+		if(expectedData.contains(actualData)) 
+		{
+			System.out.println("data is verified");
 		}
 		driver.close();
 		
+		
+		
+		
+		
+		
 	}
-	
 
 }

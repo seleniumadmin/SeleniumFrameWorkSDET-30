@@ -8,7 +8,7 @@ public class PracticeRetryAnalyser {
 	public void practiceRetry() {
 		System.out.println("this is the test 1");
 		Assert.fail();
-		System.out.println("this is the test 1");
+		System.out.println("this is the test 2");
 	}
 
 }

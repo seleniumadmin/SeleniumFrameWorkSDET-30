@@ -94,10 +94,5 @@ public class CreateOrgWithIndTypeWithMultileDD {
 			Object[][] data=eLib.readmultipleDataFromExcel("OrgWithIndTypeMultipeDD");
 			return data;
 
-			
-			
-			
-			
-			
-		}
+			}
 }

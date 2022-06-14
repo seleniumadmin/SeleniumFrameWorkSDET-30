@@ -23,15 +23,9 @@ public class OrganizationInfoPage
 	}
 	//business library
 	public String OrgNameInfo() 
-	
-	
 	{
 		String OrgInfo=headerText.getText();
 		return OrgInfo;
-		
-		
 	}
 		
-	
-	
 }

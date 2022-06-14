@@ -7,9 +7,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class AssertLoginPage1 {
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class AssertLoginPage1 
+{
 @Test
-public void assertLoginPage1() {
+public void assertLoginPage1() 
+{
+	WebDriverManager.chromedriver().setup();
 	WebDriver driver=new ChromeDriver();
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	driver.manage().window().maximize();
@@ -22,7 +27,8 @@ public void assertLoginPage1() {
 	sa.assertEquals(url, expected);
 	sa.assertAll();
 	
-	if(expected.contains(url)) {
+	if(expected.contains(url)) 
+	{
 		System.out.println("verified");
 	}
 	driver.close();

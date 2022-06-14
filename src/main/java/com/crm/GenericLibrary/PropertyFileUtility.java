@@ -11,7 +11,8 @@ import java.util.Properties;
 
 
 
-public class PropertyFileUtility {
+public class PropertyFileUtility 
+{
 	/**
 	 * this method will read data from property file and return value to user
 	 * @param
@@ -19,7 +20,8 @@ public class PropertyFileUtility {
 	 * @throws Throwable 
 	 * 
 	 */
-	public String readDataFromPropertyFile(String key) throws Throwable {
+	public String readDataFromPropertyFile(String key) throws Throwable 
+	{
 		
 		FileInputStream fis=new FileInputStream(IPathConstants.FilePath);
 		Properties pLib=new Properties();

@@ -3,13 +3,16 @@ package com.crm.PRACTICE;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class DataProviderPractice6cross2 {
+public class DataProviderPractice6cross2 
+{
 	@Test(dataProvider="getData")
-	public void saampleDataProviderPractice(String Name,int qty) {
+	public void saampleDataProviderPractice(String Name,int qty) 
+	{
 		System.out.println(Name+"----"+qty);
 	}
 	@DataProvider
-	public Object[][] getData(){
+	public Object[][] getData()
+	{
 		Object[][] obj=new Object[6][2];
 		
 		obj[0][0]="samsung";

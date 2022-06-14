@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.PRACTICE.PrintMobileNames">
+      <class name="com.crm.PRACTICE.PracticeRetryAnalyser">
         <methods>
-          <include name="printMobileNames"/>
+          <include name="practiceRetry"/>
         </methods>
-      </class> <!-- com.crm.PRACTICE.PrintMobileNames -->
+      </class> <!-- com.crm.PRACTICE.PracticeRetryAnalyser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
